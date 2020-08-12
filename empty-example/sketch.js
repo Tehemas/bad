@@ -11,6 +11,18 @@ let circles = [];
 xsize = 3700
 ysize = 2100
 
+//plate 1
+//new xsize = 1800
+//new ysize = 1070
+
+//plate 2
+//new xsize = 1800
+//new ysize = 1150
+
+//plate 3
+//new xsize = 1800
+//new ysize = 1150
+
 let off = 135;
 
 function setup()
@@ -48,7 +60,6 @@ function draw()
   
   for (let i = 0; i < circles.length; i++)
   {
-    
     //circles[i].glow();
     circles[i].display();
   }
