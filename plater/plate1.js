@@ -8,8 +8,8 @@ let largeCount = 24;
 
 let circles = [];
 
-xsize = 3700
-ysize = 2100
+xsize = 1800
+ysize = 1070
 
 //plate 1
 //new xsize = 1800
@@ -23,11 +23,12 @@ ysize = 2100
 //new xsize = 1800
 //new ysize = 1150
 
-let off = 135;
+let off = 10;
 
 function setup()
 {
-  createCanvas(xsize, ysize);
+  canvas = createCanvas(xsize, ysize);
+  canvas.position(100,100);
 
   for (let i = 0; i < smallCount; i++)
   {
@@ -41,13 +42,13 @@ function setup()
 
   for (let i = 0; i < largeCount; i++)
   {
-    circles.push(new Circle(large, [255, 0, 255]));
+    circles.push(new Circle(large, [0, 255, 0]));
   }
 }
 
 function draw()
 {
-  background(255);
+  background(0);
   
   noFill();
   stroke(0, 0, 0);
@@ -68,6 +69,11 @@ function draw()
 function drawStaticRect(off)
 {
   rect(off, off, width - 2*off, height - 2 * off)
+}
+
+function drawStaticRect()
+{
+  rect(0,0,xsize,ysize);
 }
 
 class Circle 
